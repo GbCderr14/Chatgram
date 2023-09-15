@@ -13,7 +13,7 @@ conn.once('open',()=>{
     gfs.collection("fs");
 });
 
-const url="http://localhost:8000";
+const url="https://backedn-server.onrender.com";
 const uploadFile=async(req,res)=>{
     try{
         if(!req.file){
