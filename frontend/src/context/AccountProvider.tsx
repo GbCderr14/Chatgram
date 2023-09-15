@@ -26,7 +26,7 @@ const AccountProvider = ({ children }: AccountProviderProps) => {
   const socket=useRef<Socket | undefined>();
   useEffect(()=>{
     socket.current=io("https://socket-chatgram.onrender.com");
-    console.log(socket.current);
+    // console.log(socket.current);
   },[]);
   const contextValue: AccountContextType = {
     account,
