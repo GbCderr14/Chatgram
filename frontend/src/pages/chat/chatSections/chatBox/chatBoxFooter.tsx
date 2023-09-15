@@ -53,7 +53,7 @@ function ChatBoxFooter() {
       };
     }
 
-    acctx?.socket?.current.emit("sendMessage",message);
+    acctx?.socket?.current?.emit("sendMessage",message);
 
     await newMessage(message);
   };

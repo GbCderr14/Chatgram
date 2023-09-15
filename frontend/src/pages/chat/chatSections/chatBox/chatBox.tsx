@@ -83,8 +83,8 @@ function ChatBox() {
   }, [messages]);
 
   useEffect(() => {
-    acctx?.socket?.current.emit('addUsers', acctx.account);
-    acctx?.socket?.current.on("getUsers", users => {
+    acctx?.socket?.current?.emit('addUsers', acctx.account);
+    acctx?.socket?.current?.on("getUsers", users => {
       acctx.setActiveUsers(users);
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -92,7 +92,7 @@ function ChatBox() {
 
 
   useEffect(() => {
-    acctx?.socket?.current.on('getMessage', data => {
+    acctx?.socket?.current?.on('getMessage', data => {
       setIncomingMessage({
         ...data,
         createdAt: Date.now()
