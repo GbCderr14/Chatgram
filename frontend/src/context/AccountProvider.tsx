@@ -25,7 +25,7 @@ const AccountProvider = ({ children }: AccountProviderProps) => {
   const [activeUsers,setActiveUsers]=useState<GoogleTokenPayload[]>([]);
   const socket=useRef<Socket | undefined>();
   useEffect(()=>{
-    socket.current=io("http://localhost:9000");
+    socket.current=io("https://socket-chatgram.onrender.com");
     console.log(socket.current);
   },[]);
   const contextValue: AccountContextType = {
