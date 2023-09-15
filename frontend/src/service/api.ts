@@ -1,6 +1,6 @@
 import { GoogleTokenPayload } from "../interfaces/googleToken";
 
-const url = "http://localhost:8000";
+const url = "https://api.render.com/deploy/srv-ck25s6821fec73bqdhj0?key=7t1cpoZiSbw";
 export const addUser = async (credentialResponse: GoogleTokenPayload) => {
   try {
     await fetch(url + "/addUser/", {
