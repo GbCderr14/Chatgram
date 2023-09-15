@@ -7,7 +7,7 @@ interface AccountContextType {
   setPerson: React.Dispatch<React.SetStateAction<GoogleTokenPayload>>;
   activeUsers:GoogleTokenPayload[];
   setActiveUsers:React.Dispatch<React.SetStateAction<GoogleTokenPayload[]>>;
-  socket:MutableRefObject<Socket>| undefined;
+  socket:MutableRefObject<Socket | undefined>;
 }
 import {Socket, io} from 'socket.io-client';
 
